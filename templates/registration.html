@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    {% extends 'base.html' %}
+    {% block content %}
+    {% load static %}
+    <head>
+
+    </head>
+    <body>
+       
+  <div class="col-md-6 offset-md-3">
+    <h1 style="text-align: center;"> Customer Registration </h1>
+    <br>
+    <form method="POST" action="signup"> 
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="firstname" aria-label="firstname" name="firstname" >
+            
+        </div>
+        <br>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="surname" aria-label="surname" name="surname" >
+            
+        </div>
+        <br>
+
+      <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username" name="username">
+      </div>
+      <br>
+      <div class="input-group mb-3">
+        <input type="email" class="form-control" placeholder="@email.com" aria-label="email" name="email" >
+        
+    </div>
+    <br>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="address" aria-label="address" name="address" >
+        
+    </div>
+    <br>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="08028851799" aria-label="mobile-no" name="mobile_no" >
+        
+    </div>
+    <br>
+      <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="password" aria-label="password" name="password1" >
+          
+      </div>
+      <br>
+      <div class="input-group mb-3">
+        <input type="password" class="form-control" placeholder="confirm password" aria-label="password" name="password2" >
+        
+    </div>
+    <br>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button">login</button>
+      </div>
+    </form> 
+  </div>
+</html>
+{% endblock %} 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  {% extends 'base.html'%}
+  {% block content %}
+
+  <div class="col-md-6 offset-md-3">
+    <h1 style="text-align: center;"> Login </h1>
+    <br>
+    <form method="POST" action="user_login"> 
+      <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+      </div>
+      <br>
+      
+      <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="password" aria-label="password" >
+          
+      </div>
+      <br>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button">login</button>
+      </div>
+    </form> 
+  </div>
+</html>
+{% endblock %}

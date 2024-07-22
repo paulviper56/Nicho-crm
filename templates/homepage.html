@@ -8,10 +8,37 @@
     </head>
     <body>
         <div class="col-md-6 offset-md-3">
-            {% if customer.is_authemticated %}
-            <h1>Welcome {{customer.username}}</h1>
-
-            {% else%}
+            {% if user.is_authenticated %}
+            <h1>Welcome {{user.username}}</h1>
+        </div>
+            {% for customer in customer %}
+            <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">First-Name</th>
+                    <th scope="col">Last-Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Mobile-no</th>
+                    <th scope="col">City</th>
+                    <th scope="col">zip-code</th>
+                    <th scope="col">customer-id</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{customer.firstname}}</td>
+                    <td>{{customer.surname}}</td>
+                    <td>{{customer.email}}</td>
+                    <td>{{customer.mobile_no}}</td>
+                    <td>{{customer.city}}</td>
+                    <td>{{customer.zipcode}}</td>
+                    <td>{{customer.id}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            {% endfor %}
+        <div class="col-md-6 offset-md-3">
+            {% else %}
             <h1>Welcome customer</h1>
             {% endif %}
         </div>
